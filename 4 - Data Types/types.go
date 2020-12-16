@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 	// int8 (byte), int16, int32 (rune), int64, int, uint
@@ -20,4 +23,34 @@ func main() {
 
 	floatAuto := 15.5
 	fmt.Println(floatAuto)
+
+	// strings
+
+	// Single quotes character
+	// char is INT type
+
+	// char := 'B'
+	// prints ASCII number
+	char := 'B'
+	fmt.Println(char)
+
+	// Zero Values
+
+	// initializes as 0
+	// only when declaring variable type
+	var emptyInt int16
+	fmt.Println(emptyInt)
+
+	// initializes as false
+	var booleanType bool
+	fmt.Println(booleanType)
+
+	// initializes as nil
+	var errorType error
+	fmt.Println(errorType)
+
+	// ERRORS
+	var errorMessage error = errors.New("Internal Error")
+	fmt.Println(errorMessage)
+
 }
