@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github/go-playground/area"
+	area "github/go-playground/area/goarea"
 )
 
 func main() {
