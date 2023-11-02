@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	cards := []string{"A", "B"} // Nome disso é SLICE!!
-	cards = append(cards, "C")
-	fmt.Println(cards)
+	cards := newDeck() // Nome disso é SLICE!!
+	cards.print()
 
-	for _, card := range cards {
-		fmt.Println(card)
-	}
+	hand, remaining_cards := deal(cards, 5)
+	fmt.Println("Deal (Hand) ", hand)
+	fmt.Println("Remaining Cards ", remaining_cards)
+	fmt.Println(cards.saveToFile("saved deck"))
+
 }
